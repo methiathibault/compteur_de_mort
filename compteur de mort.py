@@ -1,14 +1,14 @@
 from tkinter import *
 
 def compteurdemort(event):
-    f = open('D:\Documents\Phoenyx\mort.txt','r+')
+    f = open('chemin vers le fichier texte','r+')
     global mort
     t=event.keysym
     if t == "plus":
         mort = mort +1
         s=str(mort)
         f.write(s)
-    elif t == "minus":
+    elif t == "minus" and mort > 0:
         mort-=1
         s=str(mort)
         f.write(s)
